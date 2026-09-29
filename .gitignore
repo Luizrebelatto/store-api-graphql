@@ -1,0 +1,25 @@
+# sbt / build output
+target/
+project/target/
+project/project/
+.bsp/
+.sbtopts
+
+# Metals / Bloop (VS Code)
+.metals/
+.bloop/
+metals.sbt
+.vscode/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Scala CLI
+.scala-build/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log

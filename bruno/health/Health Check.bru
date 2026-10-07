@@ -1,0 +1,22 @@
+meta {
+  name: Health Check
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/health
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+  res.body.status: eq UP
+}
+
+tests {
+  test("returns JSON content type", function() {
+    expect(res.getHeader("content-type")).to.contain("application/json");
+  });
+}

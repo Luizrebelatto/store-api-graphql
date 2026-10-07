@@ -1,9 +1,8 @@
 package store
 
-object Main {
+import zio.*
+import zio.http.*
 
-  def main(args: Array[String]): Unit = {
-    println("Hello World")
-  }
-
+object Main extends ZIOAppDefault {
+  override def run = Server.serve(HealthRoutes.routes).provide(Server.defaultWithPort(8080))
 }

@@ -9,6 +9,8 @@ lazy val root = (project in file("."))
       name := "store-api-graphql",
       libraryDependencies ++= Seq(
         "dev.zio" %% "zio"      % "2.1.14",
-        "dev.zio" %% "zio-http" % "3.0.1"
+        "dev.zio" %% "zio-http" % "3.0.1",
+        "com.github.ghostdogpr" %% "caliban"       % "2.9.1",
+        "com.github.ghostdogpr" %% "caliban-quick" % "2.9.1"
       )
     )

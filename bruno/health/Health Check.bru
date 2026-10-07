@@ -12,11 +12,11 @@ get {
 
 assert {
   res.status: eq 200
-  res.body.status: eq UP
+  res.body: eq OK
 }
 
 tests {
-  test("returns JSON content type", function() {
-    expect(res.getHeader("content-type")).to.contain("application/json");
+  test("returns plain text content type", function() {
+    expect(res.getHeader("content-type")).to.contain("text/plain");
   });
 }

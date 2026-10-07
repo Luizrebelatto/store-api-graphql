@@ -1,5 +1,6 @@
 package store
 
+import store.http.HealthRoutes
 import zio.*
 import zio.http.*
 

@@ -7,5 +7,5 @@ case class CartItem(
 
 case class Cart(
     id: String,
-    items: List[CardItem]
+    items: List[CartItem]
 )

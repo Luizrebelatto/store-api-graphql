@@ -36,7 +36,7 @@ object GraphiQLRoutes {
 
   val routes: Routes[Any, Nothing] =
     Routes(
-      Method.GET / "graphiql" -> Handler.fromResponse(
+      Method.GET / "graphql" -> Handler.fromResponse(
         Response(
           headers = Headers(Header.ContentType(MediaType.text.html)),
           body = Body.fromString(page)
